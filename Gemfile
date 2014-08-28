@@ -14,7 +14,9 @@ gem 'devise'
 gem 'pg'
 gem 'pundit'
 gem 'simple_form'
+gem 'pry'
 group :development do
+  gem 'thin'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'hub', :require=>nil
