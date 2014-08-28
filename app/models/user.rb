@@ -1,10 +1,7 @@
 class User < ActiveRecord::Base
   enum role: [:user, :vip, :admin, :sponsor, :student]
-  after_initialize :set_default_role, :if => :new_record?
 
-  def set_default_role
-    self.role ||= :user
-  end
+  has_one :profile
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
